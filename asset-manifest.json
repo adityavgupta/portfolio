@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/adityavgupta/portfolio.git/static/css/main.13e8a3f2.chunk.css",
+    "main.js": "/adityavgupta/portfolio.git/static/js/main.3ccd322d.chunk.js",
+    "main.js.map": "/adityavgupta/portfolio.git/static/js/main.3ccd322d.chunk.js.map",
+    "runtime-main.js": "/adityavgupta/portfolio.git/static/js/runtime-main.ea618e44.js",
+    "runtime-main.js.map": "/adityavgupta/portfolio.git/static/js/runtime-main.ea618e44.js.map",
+    "static/js/2.4957b017.chunk.js": "/adityavgupta/portfolio.git/static/js/2.4957b017.chunk.js",
+    "static/js/2.4957b017.chunk.js.map": "/adityavgupta/portfolio.git/static/js/2.4957b017.chunk.js.map",
+    "index.html": "/adityavgupta/portfolio.git/index.html",
+    "static/css/main.13e8a3f2.chunk.css.map": "/adityavgupta/portfolio.git/static/css/main.13e8a3f2.chunk.css.map",
+    "static/js/2.4957b017.chunk.js.LICENSE.txt": "/adityavgupta/portfolio.git/static/js/2.4957b017.chunk.js.LICENSE.txt",
+    "static/media/Aditya.e4f16d60.jpeg": "/adityavgupta/portfolio.git/static/media/Aditya.e4f16d60.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ea618e44.js",
+    "static/js/2.4957b017.chunk.js",
+    "static/css/main.13e8a3f2.chunk.css",
+    "static/js/main.3ccd322d.chunk.js"
+  ]
+}
