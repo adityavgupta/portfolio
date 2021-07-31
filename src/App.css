@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.social
+{
+position: static;
+display: flex;
+margin-top: auto;
+margin-bottom: auto;
+margin-left: 45%;
+margin-right: 50%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.social i
+{
+padding-right: 30px;
+font-size: 30px;
+color: #9a9b9c;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.social i:hover
+{
+color: #504e4e;
+}
+/* For Home page */
+.condiv_home {
+  max-width: 80%;
+  height: auto;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: stretch;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.child {
+  width: 100%;
+  background: white;
+  color: grey;
+  margin: 0 .5em;
+  padding: .5em;
+  /* important */
+  min-height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.ProfilePic {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+/* For the About page*/
+.subtopic
+{
+margin:10px 10px 30px 10px !important;
+}
+p
+{
+font-size: var(--fontsize-p);
+}
+h1,h2,h3,h4,p
+{
+margin: 10px;
+}
+
+
+@media screen and (max-width: 960px){
+  .ProfilePic {
+    max-width: 100%;
+    height: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .social {
+    margin-left: 35%;
   }
 }
