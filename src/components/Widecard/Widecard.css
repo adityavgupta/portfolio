@@ -1,0 +1,35 @@
+
+.widecard
+{
+border:0px solid #9a9b9c;
+padding: 10px;
+border-radius: 10px;
+margin:10px 10px 10px 10px;
+
+}
+.widecard.uiuc {
+    background: #13294b;
+    color: #E84A27;
+}
+
+.widecard.uiuc:hover {
+    background: #13294b;
+    color: #E84A27;
+    box-shadow: none;
+}
+
+.widecard.umich {
+    background: #00274C;
+    color: #FFCB05;
+}
+.widecard.umich:hover {
+    background: #00274C;
+    color: #FFCB05;
+    box-shadow: none;
+}
+.widecard:hover
+{
+color: #1b1d20;
+background-color: #dadada;
+box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}

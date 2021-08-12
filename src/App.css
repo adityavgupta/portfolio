@@ -25,6 +25,13 @@ color: #9a9b9c;
 color: #504e4e;
 }
 /* For Home page */
+.condiv
+{
+padding: 70px ;
+background-color: #ffffff;
+flex:var(--condiv-flex);
+}
+
 .condiv_home {
   max-width: 80%;
   height: auto;
