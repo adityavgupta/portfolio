@@ -11,13 +11,13 @@ position: static;
 display: flex;
 margin-top: auto;
 margin-bottom: auto;
-margin-left: 45%;
+margin-left: 15%;
 margin-right: 50%;
 }
 .social i
 {
-padding-right: 30px;
-font-size: 30px;
+padding-right: 40px;
+font-size: 80px;
 color: #9a9b9c;
 }
 .social i:hover
@@ -61,7 +61,7 @@ hr {
 }
 
 .ProfilePic {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   border-radius: 20px;
   margin-top: 10px;
