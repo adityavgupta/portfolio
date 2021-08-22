@@ -9,6 +9,7 @@
 
 .navbar-logo {
     color: white;
+    display: flex;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
