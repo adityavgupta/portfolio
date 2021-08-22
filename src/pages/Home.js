@@ -6,7 +6,7 @@ import Social from './Social';
 class Home extends Component {
     render() {
         return (
-            <div>
+            
                 <div className='condiv_home'>
                     <div className="child">
                         <img src={ProfilePic} className='ProfilePic' alt=""></img>
@@ -33,7 +33,7 @@ class Home extends Component {
                     </div> 
                 </div>
                 
-            </div>
+
             
             
         )

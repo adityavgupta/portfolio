@@ -14,16 +14,35 @@ margin-bottom: auto;
 margin-left: 15%;
 margin-right: 50%;
 }
+
+.fa-github {
+ color: black;
+}
+.fa-instagram {
+  color: transparent;
+  background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.fa-facebook-f {
+  color: #4267B2;
+}
+.fa-linkedin-in {
+  color: #2867B2;
+}
 .social i
 {
-padding-right: 40px;
+padding:20px;
 font-size: 70px;
-color: #9a9b9c;
 }
-.social i:hover
-{
-color: #504e4e;
+.social i:hover {
+  font-size: 80px;
+  transition: all 0.1s ease-out;
 }
+
 /* For Home page */
 .condiv
 {
@@ -33,14 +52,16 @@ flex:var(--condiv-flex);
 }
 
 .condiv_home {
-  max-width: 80%;
+  max-width: 90%;
   height: auto;
   overflow: hidden;
   display: flex;
   align-items: stretch;
   justify-content: space-around;
 }
-
+.HomeText {
+  margin-top:5%;
+}
 .child {
   width: 100%;
   background: white;
@@ -50,6 +71,7 @@ flex:var(--condiv-flex);
   /* important */
   min-height: 100%;
 }
+
 
 hr {
   display: block;
@@ -61,10 +83,13 @@ hr {
 }
 
 .ProfilePic {
-  max-width: 90%;
+  max-width: 80%;
   height: auto;
   border-radius: 20px;
-  margin-top: 10px;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  margin-right: 5%;
 }
 
 /* For the About page*/
@@ -93,5 +118,9 @@ margin: 10px;
   }
   .social i {
     font-size: 40px;
+  }
+
+  .social i:hover {
+    font-size: 45px;
   }
 }

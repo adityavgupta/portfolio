@@ -9,7 +9,7 @@
 
 .navbar-logo {
     color: white;
-    display: flex;
+    display:flex;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
@@ -107,10 +107,9 @@
     }
 
     .navbar-logo {
-        position:fixed;
-        top: 0;
-        left:0;
-        transform: translate(25%, 50%)
+        top:13px;
+        left:13px;
+        position: absolute;
     }
 
     .menu-icon {
