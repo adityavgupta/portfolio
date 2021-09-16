@@ -5,18 +5,20 @@ import "../App.css";
 
 /* This is required only if the project file is located 
 inside the app. Otherwise you can use the external link of the pdf file*/
-// import samplePDF from "../pdf/resume_latest.pdf";
+import samplePDF from "../pdf/resume_latest.pdf";
 
 
 class Resume extends Component {
   render(){
     return (
         <div className="Resume" align="center">
-          <iframe title="res" src="https://drive.google.com/file/d/1hwqltaIk7L4j1ZnFQePhiPN9YipWuBHW/preview" 
-          width="640" 
-          height="680" 
-          allow="autoplay"
+          
+          <iframe title="res" src={`${samplePDF}#view=fitH`} 
+            width="70%" 
+            height="700"
+            allow="autoplay"
           ></iframe>
+          
           
         </div>
       );
