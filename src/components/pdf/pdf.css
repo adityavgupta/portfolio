@@ -16,11 +16,12 @@ button {
   .react-pdf__Page__textContent {
     border: 1px solid darkgrey;
     box-shadow: 5px 5px 5px 1px #ccc;
-    border-radius: 5px;
+    border-radius: 0px;
+    max-width: 100%;
   }
   
   .react-pdf__Page__annotations.annotationLayer {
-    padding: 20px;
+    padding: 1px;
   }
   
   .react-pdf__Page__canvas {
@@ -30,7 +31,7 @@ button {
   /* For all pages */
   .all-page-container {
     height: 100%;
-    max-height: 500px;
+    max-height: auto;
     overflow: auto;
   }
   
