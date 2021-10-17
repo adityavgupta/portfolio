@@ -105,7 +105,39 @@ h1,h2,h3,h4,p
 {
 margin: 10px;
 }
-
+.condiv_about {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.about_sub {
+  width: 100%;
+  background: white;
+  color: grey;
+  margin-left:5%;
+  margin-right: 5%;
+  margin-top: 2.5%;
+  margin-bottom: 5%;
+  /* important */
+  min-height: 100%;
+}
+.dukegardens {
+  max-width: 75%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+.cherryblossoms {
+  max-width: 75%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
 
 @media screen and (max-width: 960px){
   .ProfilePic {
