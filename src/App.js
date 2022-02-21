@@ -14,6 +14,7 @@ function App() {
     <HashRouter>
       <div className="App">
       <meta http-equiv='cache-control' content='no-cache'></meta>
+      <script src="test.js?rndstr=<%= getRandomStr() %>"></script>
       <Navbar/>
       <Switch>
         <Route exact path="/" component={Home} />
