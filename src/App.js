@@ -13,7 +13,7 @@ function App() {
     
     <HashRouter>
       <div className="App">
-      
+      <meta http-equiv='cache-control' content='no-cache'></meta>
       <Navbar/>
       <Switch>
         <Route exact path="/" component={Home} />
