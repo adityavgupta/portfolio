@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.8121d045.chunk.css",
-    "main.js": "/portfolio/static/js/main.60356e0b.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.60356e0b.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.697efd5d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.697efd5d.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.bcd5af5a.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.bcd5af5a.js.map",
     "static/js/2.63f54888.chunk.js": "/portfolio/static/js/2.63f54888.chunk.js",
@@ -13,12 +13,12 @@
     "static/media/Cherryblossoms.a889705b.jpg": "/portfolio/static/media/Cherryblossoms.a889705b.jpg",
     "static/media/Duke_gardens.c8dad09d.jpg": "/portfolio/static/media/Duke_gardens.c8dad09d.jpg",
     "static/media/Home_avg.391adf84.jpeg": "/portfolio/static/media/Home_avg.391adf84.jpeg",
-    "static/media/resume_latest.cfdd3612.pdf": "/portfolio/static/media/resume_latest.cfdd3612.pdf"
+    "static/media/resume.00c4974b.pdf": "/portfolio/static/media/resume.00c4974b.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.bcd5af5a.js",
     "static/js/2.63f54888.chunk.js",
     "static/css/main.8121d045.chunk.css",
-    "static/js/main.60356e0b.chunk.js"
+    "static/js/main.697efd5d.chunk.js"
   ]
 }
