@@ -18,12 +18,14 @@ render() {
                         NX CAD software's freeform modeling team. I am working there part time till May, and will work full-time
                         during summer!
                     </p>
+                    <p>Update August '23: I graduated from UMich in April with a degree in ECE: Signal and Image Processing and Machine learning and
+                        started working at KLA as a Software Engineer in Silicon Valley! Working on cool stuff within the Wafer Inspection Machine domain.
+                    </p>
                     <br></br>
                     <h2>What motivates me?</h2>
                     <p>Mostly new “tech” things that interest me. I like to read, listen and talk about new 
                         technologies being released which in turn shape where my current interests lie. 
-                        I tend to pursue such things. Right now I am most interested in the Computer Vision and 
-                        Machine Learning industry. (Wink Wink Google’s new tensor chips)
+                        I tend to pursue such things.
                     </p>
                     <br></br>
                     <h2>What other interests do I have?</h2>
