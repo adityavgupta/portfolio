@@ -20,7 +20,6 @@ class Home extends Component {
                         /></h1>
                         <hr />
                         <h2> Developer </h2>
-                        <h2> Student </h2>
                         <h2> Researcher </h2>
                         <h2> ML Enthusiast </h2>
                         {/* <h1 className='HomeText'>Hi! I am Aditya</h1> */}
@@ -32,10 +31,6 @@ class Home extends Component {
                         <Social />
                     </div> 
                 </div>
-                
-
-            
-            
         )
     }
 }
