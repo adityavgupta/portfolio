@@ -5,7 +5,7 @@ import "../App.css";
 
 /* This is required only if the project file is located 
 inside the app. Otherwise you can use the external link of the pdf file*/
-import samplePDF from "../pdf/resume.pdf";
+import samplePDF from "../pdf/resume_latest.pdf";
 
 
 class Resume extends Component {
