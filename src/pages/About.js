@@ -66,7 +66,7 @@ class About extends Component {
 
                     <div className="about-gallery">
                         <h3 style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Photography Showcase</h3>
-                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>A couple of my favorite shots — click to view full size. Find more on my social accounts!</p>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>A couple of my favorite shots. Find more on my social accounts!</p>
 
                         {photos.map((photo, idx) => (
                             <div
