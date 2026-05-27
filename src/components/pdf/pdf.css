@@ -1,4 +1,5 @@
-button {
+/* Scope the legacy buttons so they don't leak globally */
+.pdf-btn {
     margin-right: 10px;
     background: #3f51b5;
     color: white;
@@ -7,31 +8,31 @@ button {
     width: 100px;
     cursor: pointer;
     box-shadow: 2px 2px 2px 1px #ccc;
-  }
+}
   
-  /* For pdf */
-  .react-pdf__Page {
-    margin-top: 10px;
-  }
-  .react-pdf__Page__textContent {
-    border: 1px solid darkgrey;
-    box-shadow: 5px 5px 5px 1px #ccc;
-    border-radius: 0px;
-    max-width: 100%;
-  }
-  
-  .react-pdf__Page__annotations.annotationLayer {
-    padding: 1px;
-  }
-  
-  .react-pdf__Page__canvas {
-    margin: 0 auto;
-  }
-  
-  /* For all pages */
-  .all-page-container {
-    height: 100%;
-    max-height: auto;
-    overflow: auto;
-  }
-  
+/* For pdf canvas */
+.react-pdf__Page {
+  margin-top: 10px;
+}
+
+.react-pdf__Page__textContent {
+  border: 1px solid darkgrey;
+  box-shadow: 5px 5px 5px 1px #ccc;
+  border-radius: 0px;
+  max-width: 100%;
+}
+
+.react-pdf__Page__annotations.annotationLayer {
+  padding: 1px;
+}
+
+.react-pdf__Page__canvas {
+  margin: 0 auto;
+}
+
+/* For all pages container */
+.all-page-container {
+  height: 100%;
+  max-height: auto;
+  overflow: auto;
+}

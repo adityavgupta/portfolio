@@ -809,3 +809,164 @@ a {
     flex-direction: column;
   }
 }
+
+/* ==========================================================================
+   STREAMLINED FULL-WIDTH RESUME STYLES
+   ========================================================================== */
+
+/* Centered actions layout row */
+.resume-top-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.resume-top-actions .btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.8rem 2rem;
+}
+
+/* Single Column Content Boundary */
+.resume-single-column-container {
+  max-width: 860px; /* Perfectly frames standard US Letter / A4 document geometries */
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Document Window Frame */
+.resume-viewer-panel.full-width-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-viewer-panel.full-width-panel:hover {
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+.viewer-window-header {
+  background: rgba(15, 23, 42, 0.8);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.window-action-dots { display: flex; gap: 6px; }
+.window-action-dots .dot { width: 11px; height: 11px; border-radius: 50%; }
+.window-action-dots .red { background: #ef4444; }
+.window-action-dots .yellow { background: #eab308; }
+.window-action-dots .green { background: #22c55e; }
+
+/* Scoped View Switcher Pills */
+.view-toggle-container {
+  display: flex;
+  background: #0f172a;
+  padding: 4px;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+}
+
+.view-toggle-container button.viewer-toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 30px;
+  width: auto;
+  min-width: 0;
+  box-shadow: none;
+  margin: 0;
+  transition: var(--transition-smooth);
+}
+
+.view-toggle-container button.viewer-toggle-btn.active {
+  background: var(--gradient-accent);
+  color: #ffffff;
+}
+
+/* PDF Render Canvas Area */
+.pdf-dark-scroll-pane {
+  max-height: 800px; /* Slightly taller for highly readable scrolling vertical layouts */
+  overflow-y: auto;
+  padding: 2.5rem 2rem;
+  background: rgba(10, 15, 30, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hide buggy layer artifacts from react-pdf */
+.pdf-dark-scroll-pane .react-pdf__Page__textContent, 
+.pdf-dark-scroll-pane .react-pdf__Page__annotations {
+  display: none !important;
+}
+
+.pdf-dark-scroll-pane .react-pdf__Page canvas {
+  border-radius: 6px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Pagination Placement */
+.pdf-dark-scroll-pane > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.pdf-dark-scroll-pane p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Scoped Pagination Buttons */
+.pdf-dark-scroll-pane button {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 8px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 110px;
+  height: auto;
+  box-shadow: var(--shadow-sm);
+  margin: 0 6px;
+  transition: var(--transition-smooth);
+}
+
+.pdf-dark-scroll-pane button:hover:not(:disabled) {
+  background: var(--accent-primary);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.pdf-dark-scroll-pane button:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+/* Clean styling rows inside AllPages custom wrapper */
+.all-pages-render-adjustment .react-pdf__Page {
+  margin-top: 0px;
+  margin-bottom: 24px;
+}
+.all-pages-render-adjustment .react-pdf__Page:last-child {
+  margin-bottom: 0px;
+}
