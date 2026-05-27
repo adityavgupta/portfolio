@@ -3,30 +3,36 @@ import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
+import Experience from './pages/Experience';
+import Projects from './pages/Projects';
+import Skills from './pages/Skills';
 import Education from './pages/Education';
 import Resume from './pages/Resume';
-import { HashRouter, Route, Switch} from "react-router-dom";
 
 function App() {
   return (
-    
-    
-    <HashRouter>
-      <div className="App">
-      <meta http-equiv='cache-control' content='no-cache'></meta>
-      <script src="test.js?rndstr=<%= getRandomStr() %>"></script>
-      <Navbar/>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/education" component={Education}/>
-        <Route exact path="/resume" component={Resume}/>
-        
-      </Switch>
-      
-      </div>
-    </HashRouter>
-    
+    <div className="App">
+      <Navbar />
+      <main>
+        <Home />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Education />
+        <Resume />
+      </main>
+      <footer style={{ 
+        textAlign: 'center', 
+        padding: '2.5rem 0', 
+        borderTop: '1px solid rgba(255, 255, 255, 0.05)', 
+        background: '#090d16',
+        fontSize: '0.9rem', 
+        color: 'var(--text-muted)' 
+      }}>
+        <p>&copy; {new Date().getFullYear()} Aditya Vikram Gupta. All rights reserved.</p>
+      </footer>
+    </div>
   );
 }
 

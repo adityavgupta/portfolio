@@ -1,50 +1,107 @@
 import React, { Component } from 'react';
 import dukegraden from '../img/Duke_gardens.jpg';
-import cherry_blossoms from '../img/Cherryblossoms.jpg'
+import cherry_blossoms from '../img/Cherryblossoms.jpg';
 
 class About extends Component {
-render() {
+    state = { lightboxSrc: null, lightboxAlt: '' };
+
+    openLightbox = (src, alt) => {
+        this.setState({ lightboxSrc: src, lightboxAlt: alt });
+        document.body.style.overflow = 'hidden';
+    };
+
+    closeLightbox = () => {
+        this.setState({ lightboxSrc: null, lightboxAlt: '' });
+        document.body.style.overflow = '';
+    };
+
+    render() {
+        const { lightboxSrc, lightboxAlt } = this.state;
+        const photos = [
+            { src: dukegraden, alt: 'Sarah P. Duke Gardens', caption: 'Duke Gardens, Durham, NC' },
+            { src: cherry_blossoms, alt: 'Cherry Blossoms', caption: 'Cherry Blossoms in Bloom' },
+        ];
+
         return (
-            <div className="condiv_about">
-                <div className="about_sub">
-                    <h1>Hey there, here's a little something about me :)</h1>
-                    <br></br>
-                    <h2>Where am I right now?</h2>
-                    <p>I am studying at University of Michigan Ann-Arbor as a grad student in Signal 
-                        & Image Processing and Machine Learning (ECE). I completed my undergrad in Computer Engineering 
-                        from University of Illinois at Urbana-Champaign. 
-                    </p>
-                    <p>Update January '22: I started working as a Software Engineering Intern for Siemens Digital Software Industries on the
-                        NX CAD software's freeform modeling team. I am working there part time till May, and will work full-time
-                        during summer!
-                    </p>
-                    <p>Update August '23: I graduated from UMich in April with a degree in ECE: Signal and Image Processing and Machine learning and
-                        started working at KLA as a Software Engineer in Silicon Valley! Working on cool stuff within the Wafer Inspection Machine domain.
-                    </p>
-                    <br></br>
-                    <h2>What motivates me?</h2>
-                    <p>Mostly new “tech” things that interest me. I like to read, listen and talk about new 
-                        technologies being released which in turn shape where my current interests lie. 
-                        I tend to pursue such things.
-                    </p>
-                    <br></br>
-                    <h2>What other interests do I have?</h2>
-                    <p>On the side I like to do photography. Since grad school started, I have been meaning to 
-                        get into climbing and taking out my camera for a spin. On the right you can see my two favorite photos.
-                        You can find more on my instagram!
-                        Other interests include traveling, origami and playing video games.
-                    </p>
-                </div>
-                <div className="about_sub">
-                    <div>
-                        <img src={dukegraden} className="dukegardens" alt="Duke Gardens"></img>
+            <section id="about" className="section">
+                <h1 className="section-title">About Me</h1>
+                <p className="section-subtitle">Here is a little background on who I am, what drives me, and what I do outside of work.</p>
+
+                <div className="about-wrapper">
+                    <div className="about-bio">
+                        <div className="glass-card" style={{ marginBottom: '2rem' }}>
+                            <h3 style={{ marginBottom: '1rem', color: 'var(--accent-secondary)' }}>My Background</h3>
+                            <p>
+                                I completed my Master of Science in Computer Engineering at the <strong>University of Michigan, Ann Arbor</strong>,
+                                specializing in Signal &amp; Image Processing and Machine Learning. Before that, I earned my Bachelor of Science
+                                in Computer Engineering from the <strong>University of Illinois at Urbana-Champaign (UIUC)</strong>.
+                            </p>
+                            <p>
+                                Currently, I work as a Software Engineer at <strong>KLA Corporation</strong> in Silicon Valley. I am a member of the Machine Control
+                                Team, where I build high-performance controls, image processing tools, and calibration systems for wafer inspection machines.
+                            </p>
+                        </div>
+
+                        <div className="glass-card" style={{ marginBottom: '2rem' }}>
+                            <h3 style={{ marginBottom: '1rem', color: 'var(--accent-primary)' }}>What Motivates Me?</h3>
+                            <p>
+                                I am fascinated by emerging technologies and how they shape the world. I thrive on translating theoretical machine
+                                learning, reinforcement learning, and computer vision concepts into robust software solutions. Reading, listening,
+                                and learning about new technology is what fuels my professional drive.
+                            </p>
+                        </div>
+
+                        <div className="glass-card">
+                            <h3 style={{ marginBottom: '1rem', color: 'var(--accent-tertiary)' }}>Interests &amp; Hobbies</h3>
+                            <p>
+                                When I'm not tinkering around machines, writing code or other academic pursuits, I enjoy outdoor and creative pursuits!
+                                I am a passionate rock climber, photographer and badminton player. I am a part of a band with my co-workers where I
+                                play guitar, drums, and sing!
+                            </p>
+                            <p>
+                                My other hobbies include traveling, origami, swimming, golfing, and gaming.
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                    <img src={cherry_blossoms} className="cherryblossoms" alt="Cherry blossoms"></img>
+
+                    <div className="about-gallery">
+                        <h3 style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Photography Showcase</h3>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>A couple of my favorite shots — click to view full size. Find more on my social accounts!</p>
+
+                        {photos.map((photo, idx) => (
+                            <div
+                                key={idx}
+                                className="about-image-card"
+                                onClick={() => this.openLightbox(photo.src, photo.alt)}
+                                role="button"
+                                tabIndex={0}
+                                onKeyDown={(e) => e.key === 'Enter' && this.openLightbox(photo.src, photo.alt)}
+                                title="Click to enlarge"
+                            >
+                                <img src={photo.src} alt={photo.alt} />
+                                <div className="about-image-overlay">
+                                    <p className="about-image-title">{photo.caption}</p>
+                                    <span className="about-image-hint"><i className="fas fa-expand-alt"></i> Click to enlarge</span>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
-            </div>
-        )
+
+                {/* Lightbox Modal */}
+                {lightboxSrc && (
+                    <div className="lightbox-backdrop" onClick={this.closeLightbox}>
+                        <button className="lightbox-close" onClick={this.closeLightbox} aria-label="Close">
+                            <i className="fas fa-times"></i>
+                        </button>
+                        <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+                            <img src={lightboxSrc} alt={lightboxAlt} className="lightbox-img" />
+                        </div>
+                    </div>
+                )}
+            </section>
+        );
     }
 }
+
 export default About;

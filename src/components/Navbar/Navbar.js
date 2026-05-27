@@ -1,30 +1,38 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { MenuItems } from "./MenuItems";
 import Navitem from './Navitem';
-import { withRouter } from "react-router-dom";
-
-import './Navbar.css'
+import './Navbar.css';
 
 class Navbar extends Component {
-    state = {clicked: false}
+    state = { clicked: false }
 
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked })
     }
 
+    handleNavItemClick = () => {
+        this.setState({ clicked: false })
+    }
+
     render() {
-        return(
+        return (
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">Aditya V. Gupta </h1>
+                <a href="#home" className="navbar-logo">
+                    Aditya V. Gupta
+                </a>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-                    
                 </div>
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     {MenuItems.map((item, index) => {
                         return (
-                                <Navitem  key={index} item={item.title} tolink={item.url} 
-                                clName={this.state.clicked ? item.cName+' active': item.cName}></Navitem>
+                            <Navitem 
+                                key={index} 
+                                item={item.title} 
+                                tolink={item.url} 
+                                onClick={this.handleNavItemClick}
+                                clName={this.state.clicked ? item.cName + ' active' : item.cName}
+                            />
                         )
                     })}
                 </ul>
@@ -33,4 +41,4 @@ class Navbar extends Component {
     }
 }
 
-export default withRouter(Navbar);
+export default Navbar;

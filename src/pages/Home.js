@@ -1,36 +1,69 @@
-import React,  {Component} from 'react';
+import React, { Component } from 'react';
 import ReactTypingEffect from 'react-typing-effect';
-import ProfilePic from '../img/Home_avg.jpeg';
+import ProfilePic from '../img/aditya.png';
 import Social from './Social';
 
 class Home extends Component {
     render() {
         return (
-            
-                <div className='condiv_home'>
-                    <div className="child">
-                        <img src={ProfilePic} className='ProfilePic' alt=""></img>
+            <section id="home" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+                <div className="hero-wrapper">
+                    <div className="hero-content">
+                        <span className="hero-tagline">Welcome to my space</span>
+                        <h1 className="hero-name">Aditya V. Gupta</h1>
+                        
+                        <div className="hero-typed">
+                            <ReactTypingEffect 
+                                text={[
+                                    "Software Engineer @ KLA",
+                                    "Machine Learning Specialist",
+                                    "Computer Vision Enthusiast",
+                                    "Systems Developer"
+                                ]}  
+                                speed={80} 
+                                eraseSpeed={50}
+                                eraseDelay={2000}
+                                typingDelay={500}
+                            />
+                        </div>
+                        
+                        <p className="hero-description">
+                            I am a Software Engineer based in Silicon Valley, building high-performance machine control pipelines, 
+                            embedded systems, and deep learning algorithms. UMich and UIUC alumnus.
+                        </p>
+                        
+                        <div className="hero-cta">
+                            <a href="#projects" className="btn btn-primary">
+                                View Projects <i className="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#resume" className="btn btn-secondary">
+                                View Resume
+                            </a>
+                        </div>
+                        
+                        <div className="hero-contacts">
+                            <ul className="contact-info-list">
+                                <li className="contact-info-item">
+                                    <i className="fas fa-envelope"></i> gupta.adityav@gmail.com
+                                </li>
+                                <li className="contact-info-item">
+                                    <i className="fas fa-phone-alt"></i> +1 (217) 904-9045
+                                </li>
+                                <li className="contact-info-item">
+                                    <i className="fas fa-map-marker-alt"></i> Mountain View, CA
+                                </li>
+                            </ul>
+                            <Social />
+                        </div>
                     </div>
-
-                    <div className="child">
-                        <h1 className='HomeText'><ReactTypingEffect 
-                            text={["Hi, I am Aditya."]}  
-                            speed={100} 
-                            eraseDelay={500000}
-                        /></h1>
-                        <hr />
-                        <h2> Developer </h2>
-                        <h2> Researcher </h2>
-                        <h2> ML Enthusiast </h2>
-                        {/* <h1 className='HomeText'>Hi! I am Aditya</h1> */}
-                        <hr/>
-                        <h1>Let's stay connected!</h1>
-                        <h3>Ph: +1 (217)904-9045</h3>
-                        <h3>Email: gupta.adityav@gmail.com</h3>
-                        <hr/>
-                        <Social />
-                    </div> 
+                    
+                    <div className="hero-image-wrapper">
+                        <div className="hero-image-container">
+                            <img src={ProfilePic} className="hero-image" alt="Aditya Vikram Gupta"></img>
+                        </div>
+                    </div>
                 </div>
+            </section>
         )
     }
 }

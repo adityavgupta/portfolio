@@ -1,35 +1,118 @@
-
-.widecard
-{
-border:0px solid #9a9b9c;
-padding: 10px;
-border-radius: 10px;
-margin:10px 10px 10px 10px;
-
-}
-.widecard.uiuc {
-    background: #13294b;
-    color: #E84A27;
+.widecard-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  border-left: 4px solid var(--accent-primary);
 }
 
-.widecard.uiuc:hover {
-    background: #13294b;
-    color: #E84A27;
-    box-shadow: none;
+.widecard-icon {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
 }
 
-.widecard.umich {
-    background: #00274C;
-    color: #FFCB05;
+.widecard-container:hover .widecard-icon {
+  transform: scale(1.05);
 }
-.widecard.umich:hover {
-    background: #00274C;
-    color: #FFCB05;
-    box-shadow: none;
+
+.widecard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
-.widecard:hover
-{
-color: #1b1d20;
-background-color: #dadada;
-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+.widecard-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-secondary);
+  margin-bottom: 0.2rem;
+}
+
+.widecard-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.widecard-institution {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.widecard-duration {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.2rem;
+}
+
+/* School Specific Branding */
+.school-umich {
+  border-left-color: #FFCB05;
+}
+
+.school-umich .widecard-icon {
+  background: rgba(0, 39, 76, 0.3);
+  border-color: rgba(255, 203, 5, 0.3);
+  color: #FFCB05;
+  box-shadow: 0 0 15px rgba(255, 203, 5, 0.05);
+}
+
+.school-umich .widecard-badge {
+  color: #FFCB05;
+}
+
+.school-uiuc {
+  border-left-color: #E84A27;
+}
+
+.school-uiuc .widecard-icon {
+  background: rgba(19, 41, 75, 0.3);
+  border-color: rgba(232, 74, 39, 0.3);
+  color: #E84A27;
+  box-shadow: 0 0 15px rgba(232, 74, 39, 0.05);
+}
+
+.school-uiuc .widecard-badge {
+  color: #E84A27;
+}
+
+@media screen and (max-width: 768px) {
+  .widecard-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.8rem;
+  }
+  
+  .widecard-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 1.4rem;
+  }
+  
+  .widecard-title {
+    font-size: 1.15rem;
+  }
 }
